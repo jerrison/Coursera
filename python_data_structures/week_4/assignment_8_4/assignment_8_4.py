@@ -6,6 +6,7 @@ alphabetical order.
 '''
 
 fname = input("Enter file name: ")
+if len(fname) < 1 : fname = "romeo.txt"
 fh = open(fname)
 lst = list()
 
