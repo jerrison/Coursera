@@ -21,7 +21,7 @@ for line in fh:
     org = re.findall('@(\S+)', org)[0]
     cur.execute('SELECT count FROM Counts WHERE org = ? ', (org,))
     row = cur.fetchone()
-    if row is None:
+    if row is None: 
         cur.execute('''INSERT INTO Counts (org, count)
                 VALUES (?, 1)''', (org,))
     else:
